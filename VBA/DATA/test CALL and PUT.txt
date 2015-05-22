@@ -1,0 +1,106 @@
+CALL
+Test1	
+Call	Am
+Spot Price	100
+Strike 	95
+No. of Time Steps	100-1000 step 50
+Dividend Yield	0
+Risk Free Rate	0.05
+Option Maturity (years)	1
+V	0.05
+
+Test2	
+Call	Am
+Spot Price	100
+Strike 	90-180 step 2
+No. of Time Steps	100
+Dividend Yield	0
+Risk Free Rate	0.05
+Option Maturity (years)	1
+V	0.5
+
+Test3	
+Call	Am
+Spot Price	100
+Strike 	100
+No. of Time Steps	100
+Dividend Yield	0
+Risk Free Rate	0%-18% step 0.4%
+Option Maturity (years)	1
+V	0.05
+
+Test4	
+Call	Am
+Spot Price	100
+Strike 	100
+No. of Time Steps	100
+Dividend Yield	0%-18% step 0.4%
+Risk Free Rate	0.05
+Option Maturity (years)	1
+V	0.5
+
+PUT
+Test1	
+Put	Am
+Spot Price	100
+Strike 	100
+No. of Time Steps	100-1000 step 50
+Dividend Yield	0
+Risk Free Rate	0.05
+Option Maturity (years)	1
+V	0.05
+
+Test2	
+Put	Am
+Spot Price	100
+Strike 	20-180 step 2
+No. of Time Steps	100
+Dividend Yield	0
+Risk Free Rate	0.05
+Option Maturity (years)	1
+V	0.5
+
+Test3	
+Put	Am
+Spot Price	100
+Strike 	100
+No. of Time Steps	100
+Dividend Yield	0
+Risk Free Rate	0%-18% step 0.4%
+Option Maturity (years)	1
+V	0.05
+
+Test4	
+Put	Am
+Spot Price	100
+Strike 	100
+No. of Time Steps	100
+Dividend Yield	0%-18% step 0.4%
+Risk Free Rate	0.05
+Option Maturity (years)	1
+V	0.05
+
+
+Test5	
+Put	Am
+Spot Price	100
+Strike 	100
+No. of Time Steps	100
+Dividend Yield	0
+Risk Free Rate	0.05
+Option Maturity (years)	1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
