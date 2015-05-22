@@ -15,9 +15,11 @@ A joint collaboration between the Finance and Financial Service and Business Ana
 
 	Multiscale Dataﬂow Computing employs dataﬂow on multiple levels of abstraction: the system level,the architecture level, the arithmetic level and the bit level. On the system level, multiple dataﬂowengines are connected to form a supercomputer. On the architecture level, memory access can be decoupled from arithmetic operations, while the arithmetic and bit levels provide opportunities to optimize the representation of the data and balance computation with communication.
 
+img[alt=maxcompiler] { width: 50%; }
+
 |Figure 1: An example of Dataflow Computing in Maxeler|
 |:-------------:|
-| <img src="https://raw.githubusercontent.com/jlroo/maxeler/master/IMG/MAXCOMPILER.png" alt="MaxCompiler" style="width:50%;"/>|
+|![maxcompiler](https://raw.githubusercontent.com/jlroo/maxeler/master/IMG/MAXCOMPILER.png)|
 | As illustrated in Figure 1, CPU codes (C language) are the main front to navigate data streaming into Engine Codes (MyKernel in Figure 1), which are written in Java for its data design expressions. The communication and translation between CPU codes and Engine codes are performed continuously.|
 
 
