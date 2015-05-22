@@ -14,9 +14,14 @@ A joint collaboration between the Finance and Financial Service and Business Ana
 	In addition to the FPGA, Maxeler’s Multiscale DataﬂowComputing, a combination of traditional synchronous data flow, vector and array processor, allows for the manipulation of loop level parallelism in a spatial, pipelined way. Large streams of data ﬂowing through a sea of arithmetic units can be connected to match the structure of the computer task. Small on-chip memories form a distributed register ﬁle with as many access ports as needed to support a smooth ﬂow of data through the chip.
 
 	Multiscale Dataﬂow Computing employs dataﬂow on multiple levels of abstraction: the system level,the architecture level, the arithmetic level and the bit level. On the system level, multiple dataﬂowengines are connected to form a supercomputer. On the architecture level, memory access can be decoupled from arithmetic operations, while the arithmetic and bit levels provide opportunities to optimize the representation of the data and balance computation with communication.
+
 <style>
-img[alt=maxcompiler] { width: 50%; }
+img[alt="maxcompiler"] { 
+  max-width:  50%; 
+  display: block;
+}
 </style>
+
 |Figure 1: An example of Dataflow Computing in Maxeler|
 |:-------------:|
 |![maxcompiler](https://raw.githubusercontent.com/jlroo/maxeler/master/IMG/MAXCOMPILER.png)|
