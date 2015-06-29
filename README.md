@@ -27,7 +27,7 @@ The Cox–Ross–Rubinstein (CRR) procedure, part of the Binomal Options Pricing
 
 Initially we built a controlled environment based on static data provided by the Finance Department (VBA model). The static data comprises of spot prices, dividend yields and other constants of a standard call option. Using the CRR formula, these data were used to calculate Implied Volatility (IV).
 
-|Figure 1: Program  Flowchart|
+|Figure 2: Program  Flowchart|
 |:-------------:|
 |<img height="95%" width="95%" src="https://raw.githubusercontent.com/jlroo/maxeler/master/IMG/flowchart.png">|
 
