@@ -47,5 +47,4 @@ Initially we built a controlled environment based on static data provided by the
 
 ##Resources
 
-**CRR Model Paper**
-[Implied Volatility for Options on Futures Using the Cox-Ross-Rubinstein (CRR) Model](https://www.researchgate.net/publication/279296767_Implied_Volatility_for_Options_on_Futures_Using_the_Cox-Ross-Rubinstein_%28CRR%29_Model)
+**CRR Model Paper: ** [Implied Volatility for Options on Futures Using the Cox-Ross-Rubinstein (CRR) Model](https://www.researchgate.net/publication/279296767_Implied_Volatility_for_Options_on_Futures_Using_the_Cox-Ross-Rubinstein_%28CRR%29_Model)
