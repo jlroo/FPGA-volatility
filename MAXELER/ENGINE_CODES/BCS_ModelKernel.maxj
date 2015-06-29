@@ -1,0 +1,38 @@
+
+package bcs_model;
+
+import com.maxeler.maxcompiler.v2.kernelcompiler.Kernel;
+import com.maxeler.maxcompiler.v2.kernelcompiler.KernelParameters;
+import com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEType;
+import com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEVar;
+
+class BCS_ModelKernel extends Kernel {
+
+    // INITIALIZE DATA TYPE FLOAT
+    private static final DFEType typef = dfeFloat(8, 24);
+
+    // INITIALIZE KERNEL
+    protected BCS_ModelKernel(KernelParameters parameters) {
+        super(parameters);
+
+        //    OPTION PRICE
+        DFEVar c = io.input("k", typef);
+
+        //    STRIKE PRICE
+        DFEVar k = io.input("c", typef);
+
+        //    SQRT ROOT
+        DFEVar a = io.scalarInput("m", typef);
+
+        //    UNDERLYING
+        DFEVar s = io.scalarInput("l", typef);
+
+        // BCS FORMULA
+        DFEVar result = a * ( (c -(k-s)/constant.var(2.0)) / (s - (s - k)/constant.var(2.0)) );
+
+        //DFE RESULT TO CPU
+        io.output("sigma", result,typef);
+
+    }
+
+}

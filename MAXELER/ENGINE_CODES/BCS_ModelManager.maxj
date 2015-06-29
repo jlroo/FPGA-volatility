@@ -1,0 +1,63 @@
+
+package bcs_model;
+
+import static com.maxeler.maxcompiler.v2.managers.standard.Manager.link;
+
+import com.maxeler.maxcompiler.v2.kernelcompiler.Kernel;
+import com.maxeler.maxcompiler.v2.managers.BuildConfig;
+import com.maxeler.maxcompiler.v2.managers.engine_interfaces.CPUTypes;
+import com.maxeler.maxcompiler.v2.managers.engine_interfaces.EngineInterface;
+import com.maxeler.maxcompiler.v2.managers.engine_interfaces.InterfaceParam;
+import com.maxeler.maxcompiler.v2.managers.standard.IOLink.IODestination;
+import com.maxeler.maxcompiler.v2.managers.standard.Manager;
+
+public class BCS_ModelManager {
+
+    private static final String s_kernelName = "BCS_ModelKernel";
+
+    public static void main(String[] args) {
+        BCS_ModelEngineParameters params = new BCS_ModelEngineParameters(args);
+        Manager manager = new Manager(params);
+        Kernel kernel   = new BCS_ModelKernel(manager.makeKernelParameters(s_kernelName));
+        manager.setKernel(kernel);
+        manager.setIO(
+            link("k",   IODestination.CPU),
+            link("c",   IODestination.CPU),
+            link("sigma",   IODestination.CPU));
+
+        manager.createSLiCinterface(interfaceDefault());
+
+        configBuild(manager, params);
+
+        manager.build();
+    }
+
+    private static EngineInterface interfaceDefault() {
+        EngineInterface engine_interface = new EngineInterface();
+
+        CPUTypes   typef = CPUTypes.FLOAT;
+        int        sizef = typef.sizeInBytes();
+
+        InterfaceParam  a    = engine_interface.addParam("A", CPUTypes.FLOAT);
+        InterfaceParam  N    = engine_interface.addParam("N", CPUTypes.INT);
+        InterfaceParam  b    = engine_interface.addParam("B", CPUTypes.FLOAT);
+
+        engine_interface.setScalar(s_kernelName, "m", a);
+        engine_interface.setScalar(s_kernelName, "l", b);
+
+        engine_interface.setTicks(s_kernelName     , N);
+        engine_interface.setStream("k",       typef, N * sizef);
+        engine_interface.setStream("c",       typef, N * sizef);
+        engine_interface.setStream("sigma",   typef, N * sizef);
+
+        return engine_interface;
+    }
+
+    private static void configBuild(Manager manager, BCS_ModelEngineParameters params) {
+        manager.setEnableStreamStatusBlocks(false);
+        BuildConfig buildConfig = manager.getBuildConfig();
+        buildConfig.setMPPRCostTableSearchRange(params.getMPPRStartCT(), params.getMPPREndCT());
+        buildConfig.setMPPRParallelism(params.getMPPRThreads());
+        buildConfig.setMPPRRetryNearMissesThreshold(params.getMPPRRetryThreshold());
+    }
+}
