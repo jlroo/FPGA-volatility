@@ -17,7 +17,7 @@ A joint collaboration between the Finance Department, The Financial Service and 
 
 |Figure 1: An example of Dataflow Computing in Maxeler|
 |:-------------:|
-|<img height="95%" width="95%" src="https://raw.githubusercontent.com/jlroo/maxeler/master/IMG/maxcompiler.png">|
+|<img height="95%" width="95%" src="https://raw.githubusercontent.com/jlroo/maxeler/master/IMG/MAXCOMPILER.png">|
 | As illustrated in Figure 1, CPU codes (C language) are the main front to navigate data streaming into Engine Codes (MyKernel in Figure 1), which are written in Java for its data design expressions. The communication and translation between CPU codes and Engine codes are performed continuously.|
 
 
