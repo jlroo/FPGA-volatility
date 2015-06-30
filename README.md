@@ -31,9 +31,14 @@ Initially we built a controlled environment based on static data provided by the
 |:-------------:|
 |<img height="95%" width="95%" src="https://raw.githubusercontent.com/jlroo/maxeler/master/IMG/flowchart.png">|
 
-|Binomial Price Model| Calculation |
+###An Alternative to Black-Scholes
+
+There exists a discrete-time analog to the continuous time Black-Scholes model, the binomial model.
+
+|Binomial Price Model|Calculation|
 |:-------------:|:-------------:|
 |<img height="95%" width="95%" src="https://raw.githubusercontent.com/jlroo/maxeler/master/IMG/TREE_PRICE.png">|<img height="95%" width="95%" src="https://raw.githubusercontent.com/jlroo/maxeler/master/IMG/crr_tree.png">|
+Figure 3: This model can handle early exercise (American Options).
 
 ##Practical Implication
 
