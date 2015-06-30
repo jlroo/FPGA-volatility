@@ -31,6 +31,10 @@ Initially we built a controlled environment based on static data provided by the
 |:-------------:|
 |<img height="95%" width="95%" src="https://raw.githubusercontent.com/jlroo/maxeler/master/IMG/flowchart.png">|
 
+|Binomial Price Model| Calculation |
+|:-------------:|:-------------:|
+|<img height="95%" width="95%" src="https://raw.githubusercontent.com/jlroo/maxeler/master/IMG/TREE_PRICE.png">|<img height="95%" width="95%" src="https://raw.githubusercontent.com/jlroo/maxeler/master/IMG/crr_tree.png">|
+
 ##Practical Implication
 
 * Implied volatility outperforms time-series models based on historical data for the purposes of forecasting volatility.
